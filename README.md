@@ -21,9 +21,7 @@ A custom application built entirely within Google Workspace to automate sending 
 
 ## Screenshots
 
-*(Optional but highly recommended: Take a screenshot of your web app interface and add it here. You can drag and drop the image into the GitHub editor later.)*
-
-`![Web App Interface](link-to-your-screenshot.png)`
+`![Web App Interface]https://github.com/user-attachments/assets/6b0e0fe4-6ffd-42d1-92f0-9df157f73026)`
 
 ## Setup and Installation
 
