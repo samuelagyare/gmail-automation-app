@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    </head>
+  <body>
+    <h1>Client Email Scheduler</h1>
+    <form id="client-form">
+      <input type="text" name="firstName" placeholder="Client First Name" required><br>
+      <input type="text" name="lastName" placeholder="Client Last Name" required><br>
+      <input type="email" name="email" placeholder="Client Email" required><br>
+      <input type="tel" name="phone" placeholder="Client Phone Number"><br>
+      <input type="number" name="daysToEmail" placeholder="Number of days to email (e.g., 7)" required><br>
+      <textarea name="message" placeholder="Message to Client" rows="6" required></textarea><br>
+      <label for="status">Status:</label>
+      <select name="status" id="status">
+        <option value="Active">Active</option>
+        <option value="Inactive">Inactive</option>
+      </select><br><br>
+      <button type="submit">Save Client</button>
+    </form>
+
+    <h2>Existing Clients</h2>
+    <div id="client-list-table">
+      </div>
+
+    
+      // JavaScript to handle form submission and load data will go here
+      <script>
+  document.getElementById("client-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    // 'this' refers to the form element
+    google.script.run
+      .withSuccessHandler(response => {
+        alert(response.message);
+        document.getElementById("client-form").reset();
+      })
+      .withFailureHandler(error => {
+        alert("Error: " + error.message);
+      })
+      .saveClient(this); // 'this' passes the form object to the backend
+  });
+</script>
+    
+  </body>
+</html>

@@ -1,0 +1,8 @@
+# Ignore the clasp session token file
+.clasprc.json
+
+# Ignore the hidden clasp project ID file
+.clasp.json
+
+# Ignore Node.js dependencies if you ever add them
+node_modules/
