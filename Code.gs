@@ -46,6 +46,9 @@ function sendScheduledEmails() {
     const client = {};
     headers.forEach((header, i) => client[header] = row[i]); // Convert row array to object
 
+// Normalize today's date to the very beginning of the day (midnight)
+// This ensures a fair and accurate comparison against the NextSendDate.
+today.setHours(0, 0, 0, 0);
     const nextSend = new Date(client.NextSendDate);
     nextSend.setHours(0, 0, 0, 0);
 
